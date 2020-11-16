@@ -40,13 +40,12 @@ export default class GQLHTTPTools {
     }
   }
 
-  static createSchema(typeDefs: [GQLSchema] | GQLSchema): string | undefined {
-    // @ts-ignore
+  static createSchema(typeDefs: GQLSchema | [GQLSchema]): string {
     let schema = '';
 
     if (Array.isArray(typeDefs)) {
       typeDefs.forEach((typeDef) => {
-        schema = GQLHTTPTools.addSchema(typeDef);
+        schema += GQLHTTPTools.addSchema(typeDef);
       });
     } else {
       schema = GQLHTTPTools.addSchema(typeDefs);
