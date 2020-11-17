@@ -1,8 +1,9 @@
 {
   "name": "gqlhttptools",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A GraphQL tool to work with schemas and express-graphql",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
     "lib/**/*"
   ],
