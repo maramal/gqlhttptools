@@ -38,5 +38,6 @@ test('create schema from single type definition', () => {
 });
 
 test('create schema from multiple type definitions', () => {
-    expect(GQLHTTPTools.createSchema([testSchema1 as GQLSchema, testTypeDef1 as GQLSchema]))
+    expect(GQLHTTPTools.createSchema([testSchema1 as GQLSchema, testSchema2 as GQLSchema]))
+        .toMatch(regex);
 });

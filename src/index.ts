@@ -40,7 +40,7 @@ export default class GQLHTTPTools {
     }
   }
 
-  static createSchema(typeDefs: GQLSchema | [GQLSchema]): string {
+  static createSchema(typeDefs: GQLSchema | Array<GQLSchema>): string {
     let schema = '';
 
     if (Array.isArray(typeDefs)) {
